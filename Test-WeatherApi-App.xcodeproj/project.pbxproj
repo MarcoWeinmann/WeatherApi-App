@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		1EE1A40E29768EF900AC7C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A40D29768EF900AC7C95 /* AppDelegate.swift */; };
 		1EE1A41029768EF900AC7C95 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A40F29768EF900AC7C95 /* SceneDelegate.swift */; };
-		1EE1A41229768EF900AC7C95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A41129768EF900AC7C95 /* ViewController.swift */; };
+		1EE1A41229768EF900AC7C95 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A41129768EF900AC7C95 /* HomeController.swift */; };
 		1EE1A41529768EF900AC7C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE1A41329768EF900AC7C95 /* Main.storyboard */; };
 		1EE1A41829768EF900AC7C95 /* Test_WeatherApi_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A41629768EF900AC7C95 /* Test_WeatherApi_App.xcdatamodeld */; };
 		1EE1A41A29768EFA00AC7C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EE1A41929768EFA00AC7C95 /* Assets.xcassets */; };
 		1EE1A41D29768EFA00AC7C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EE1A41B29768EFA00AC7C95 /* LaunchScreen.storyboard */; };
+		1EE1A4252976951800AC7C95 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A4242976951800AC7C95 /* NetworkController.swift */; };
+		1EE1A4272976957C00AC7C95 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A4262976957C00AC7C95 /* Weather.swift */; };
+		1EE1A4292976D62D00AC7C95 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE1A4282976D62D00AC7C95 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1EE1A40A29768EF900AC7C95 /* Test-WeatherApi-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Test-WeatherApi-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EE1A40D29768EF900AC7C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1EE1A40F29768EF900AC7C95 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1EE1A41129768EF900AC7C95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1EE1A41129768EF900AC7C95 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		1EE1A41429768EF900AC7C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1EE1A41729768EF900AC7C95 /* Test_WeatherApi_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test_WeatherApi_App.xcdatamodel; sourceTree = "<group>"; };
 		1EE1A41929768EFA00AC7C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1EE1A41C29768EFA00AC7C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1EE1A41E29768EFA00AC7C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EE1A4242976951800AC7C95 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		1EE1A4262976957C00AC7C95 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		1EE1A4282976D62D00AC7C95 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +66,15 @@
 			children = (
 				1EE1A40D29768EF900AC7C95 /* AppDelegate.swift */,
 				1EE1A40F29768EF900AC7C95 /* SceneDelegate.swift */,
-				1EE1A41129768EF900AC7C95 /* ViewController.swift */,
+				1EE1A41129768EF900AC7C95 /* HomeController.swift */,
+				1EE1A4282976D62D00AC7C95 /* HomeViewModel.swift */,
 				1EE1A41329768EF900AC7C95 /* Main.storyboard */,
 				1EE1A41929768EFA00AC7C95 /* Assets.xcassets */,
 				1EE1A41B29768EFA00AC7C95 /* LaunchScreen.storyboard */,
 				1EE1A41E29768EFA00AC7C95 /* Info.plist */,
 				1EE1A41629768EF900AC7C95 /* Test_WeatherApi_App.xcdatamodeld */,
+				1EE1A4242976951800AC7C95 /* NetworkController.swift */,
+				1EE1A4262976957C00AC7C95 /* Weather.swift */,
 			);
 			path = "Test-WeatherApi-App";
 			sourceTree = "<group>";
@@ -141,9 +150,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE1A41229768EF900AC7C95 /* ViewController.swift in Sources */,
+				1EE1A4252976951800AC7C95 /* NetworkController.swift in Sources */,
+				1EE1A41229768EF900AC7C95 /* HomeController.swift in Sources */,
+				1EE1A4292976D62D00AC7C95 /* HomeViewModel.swift in Sources */,
 				1EE1A40E29768EF900AC7C95 /* AppDelegate.swift in Sources */,
 				1EE1A41829768EF900AC7C95 /* Test_WeatherApi_App.xcdatamodeld in Sources */,
+				1EE1A4272976957C00AC7C95 /* Weather.swift in Sources */,
 				1EE1A41029768EF900AC7C95 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,8 +299,8 @@
 		1EE1A42229768EFA00AC7C95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QYV799SM5V;
@@ -315,8 +327,8 @@
 		1EE1A42329768EFA00AC7C95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QYV799SM5V;
