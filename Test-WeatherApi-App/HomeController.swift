@@ -32,7 +32,7 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.fetchWeather(for: searchField.text ?? "Aalen") { [weak self] in
+        viewModel.fetchWeather(for: "Berlin") { [weak self] in
             DispatchQueue.main.async {
                 self?.setupUI()
             }
