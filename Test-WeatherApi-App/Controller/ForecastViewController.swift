@@ -64,18 +64,18 @@ class ForecastViewController: UIViewController {
     
     private func setupUI() {
         
-        let date = Date(timeIntervalSince1970: TimeInterval((weatherForecast?.list[1].dt ?? 1) / 1000))
+        let date = Date(timeIntervalSince1970: TimeInterval((viewModel.date)))
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(abbreviation: "GMT") //Set timezone that you want
         dateFormatter.locale = NSLocale.current
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm" //Specify your format that you want
         let strDate = dateFormatter.string(from: date)
         
-        dt1.text = weatherForecast?.city.name ?? "hallö"
-//        dt2.text = String (viewModel.date)
-//        dt3.text = String (viewModel.date)
-//        dt4.text = String (viewModel.date)
-//        dt5.text = String (viewModel.date)
+        dt1.text = strDate
+        dt2.text = strDate
+        dt3.text = strDate
+        dt4.text = strDate
+        dt5.text = strDate
         
         
 //        temp1.text = String((weatherForecast?.list[1].main.temp_min)! +  viewModel.tempMaxStringForecast)
