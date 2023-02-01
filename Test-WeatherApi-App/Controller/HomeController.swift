@@ -29,6 +29,8 @@ class HomeController: UIViewController {
     
     @IBOutlet weak var searchField: UITextField!
     
+    var suchBegriff: String = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,7 @@ class HomeController: UIViewController {
     }
     
     @IBAction func searchFieldAction(_ sender: Any) {
+        suchBegriff = searchField.text!
         viewModel.fetchWeather(for: searchField.text ?? "Aalen") { [weak self] in
             DispatchQueue.main.async {
                 self?.setupUI()
@@ -56,6 +59,7 @@ class HomeController: UIViewController {
     private func setupHeader() {
         tempLabel.text = viewModel.temperatureString
         nameLabel.text = viewModel.nameString
+        suchBegriff = nameLabel.text!
     }
 
     private func setupSubHeader(){
@@ -64,6 +68,15 @@ class HomeController: UIViewController {
         maxTempLabel.text = viewModel.maxTemperatureString
         pressureLabel.text = viewModel.pressureString
         humidityLabel.text = viewModel.humidityString
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueForecast" {
+            
+            guard let destVc = segue.destination as? ForecastViewController else {return}
+            
+            destVc.suchBegriff = suchBegriff
+        }
     }
 }
 
