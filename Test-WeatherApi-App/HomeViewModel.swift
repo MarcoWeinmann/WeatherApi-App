@@ -9,7 +9,7 @@ import Foundation
 
 class HomeViewModel {
     var weather: Weather?
-    var weatherForecast: WeatherForecast?
+    var weatherForecast: WeatherForecast!
     
     private var main: Weather.Main? {
         return weather?.main
@@ -82,6 +82,9 @@ class HomeViewModel {
     func fetchWeatherForecast(for name: String, _ completion: @escaping (() -> Void)) {
         ForecastNetworkController.fetchWeather(for: name) { weather in
             self.weatherForecast = weather
+            
+       
+  
             completion()
         }
         

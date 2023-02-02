@@ -8,14 +8,23 @@
 import Foundation
 
 struct WeatherForecast: Decodable {
+  
+    
+    
+    
     var list: [List]
     var city: City
     
 }
-struct List: Decodable {
+struct List: Decodable, Equatable {
+    static func == (lhs: List, rhs: List) -> Bool {
+        return true
+    }
+    
     var dt: Int
     var main: Main
     var weather: [Weather2]
+    var dt_txt: String
     
 }
         
