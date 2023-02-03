@@ -249,13 +249,46 @@
                                 <rect key="frame" x="10" y="127.33333333333331" width="373" height="645.66666666666674"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellForecast" id="fyc-9n-LqQ">
-                                        <rect key="frame" x="0.0" y="50" width="373" height="43.666667938232422"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellForecast" rowHeight="100" id="fyc-9n-LqQ" customClass="MyTableViewCell" customModule="Test_WeatherApi_App" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="373" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fyc-9n-LqQ" id="whD-5y-5VT">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dry-92-7XK">
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="50" height="25.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYD-zb-Who">
+                                                    <rect key="frame" x="300" y="11" width="48" height="24"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5E-vK-MbM">
+                                                    <rect key="frame" x="20" y="51.333333333333336" width="48" height="24.000000000000007"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Dry-92-7XK" firstAttribute="top" secondItem="whD-5y-5VT" secondAttribute="topMargin" id="3jz-ar-KfX"/>
+                                                <constraint firstItem="m5E-vK-MbM" firstAttribute="top" secondItem="Dry-92-7XK" secondAttribute="bottom" constant="15" id="DRq-v0-BWd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fYD-zb-Who" secondAttribute="trailing" constant="5" id="OJl-RR-VvI"/>
+                                                <constraint firstItem="Dry-92-7XK" firstAttribute="leading" secondItem="whD-5y-5VT" secondAttribute="leadingMargin" id="tP9-F9-sZC"/>
+                                                <constraint firstItem="m5E-vK-MbM" firstAttribute="leading" secondItem="whD-5y-5VT" secondAttribute="leadingMargin" id="w07-mw-jff"/>
+                                                <constraint firstItem="fYD-zb-Who" firstAttribute="top" secondItem="whD-5y-5VT" secondAttribute="topMargin" id="wBa-zH-hJe"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelDescription" destination="fYD-zb-Who" id="7R2-mb-fKY"/>
+                                            <outlet property="labelTemp" destination="m5E-vK-MbM" id="kOI-hg-43V"/>
+                                            <outlet property="labelTime" destination="Dry-92-7XK" id="5q8-yZ-mfE"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

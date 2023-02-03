@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E03DB3B298D48A500AD93F8 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E03DB3A298D48A500AD93F8 /* MyTableViewCell.swift */; };
 		1EABB96D298A5DBF00E0A1B7 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABB96C298A5DBF00E0A1B7 /* ForecastViewController.swift */; };
 		1EABB96F298A5E2000E0A1B7 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABB96E298A5E2000E0A1B7 /* WeatherForecast.swift */; };
 		1EABB973298A665E00E0A1B7 /* ForecastNetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EABB972298A665E00E0A1B7 /* ForecastNetworkController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E03DB3A298D48A500AD93F8 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		1EABB96C298A5DBF00E0A1B7 /* ForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		1EABB96E298A5E2000E0A1B7 /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		1EABB972298A665E00E0A1B7 /* ForecastNetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastNetworkController.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				1EE1A4242976951800AC7C95 /* NetworkController.swift */,
 				1EABB96C298A5DBF00E0A1B7 /* ForecastViewController.swift */,
 				1EABB972298A665E00E0A1B7 /* ForecastNetworkController.swift */,
+				1E03DB3A298D48A500AD93F8 /* MyTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				1EABB96F298A5E2000E0A1B7 /* WeatherForecast.swift in Sources */,
 				1EABB973298A665E00E0A1B7 /* ForecastNetworkController.swift in Sources */,
 				1EE1A4252976951800AC7C95 /* NetworkController.swift in Sources */,
+				1E03DB3B298D48A500AD93F8 /* MyTableViewCell.swift in Sources */,
 				1EE1A41229768EF900AC7C95 /* HomeController.swift in Sources */,
 				1EE1A4292976D62D00AC7C95 /* HomeViewModel.swift in Sources */,
 				1EE1A40E29768EF900AC7C95 /* AppDelegate.swift in Sources */,

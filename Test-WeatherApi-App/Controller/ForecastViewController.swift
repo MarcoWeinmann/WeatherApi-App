@@ -98,18 +98,24 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellForecast", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellForecast", for: indexPath) as! MyTableViewCell
         
-        var content = cell.defaultContentConfiguration()
+      
         
-        if indexPath.row % 8 == 0 {
-            let cellInput = viewModel.weatherForecast!.list[indexPath.row + 8]
-            content.text = cellInput.dt_txt
-            //   content.secondaryText = cellInput?.weather[indexPath.row].description
-            cell.contentConfiguration = content
-        }
+
+            let cellInput = viewModel.weatherForecast!.list[indexPath.row]
+        
+        cell.labelTime.text = cellInput.dt_txt
+        cell.labelTemp.text = String(cellInput.main.temp_min) + "°C / " + String(cellInput.main.temp_max) + "°C"
+        cell.labelDescription.text = cellInput.weather.last?.description
+          
+           
+        
         
         return cell
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        100
     }
     
 }

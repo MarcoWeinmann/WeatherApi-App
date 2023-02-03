@@ -81,7 +81,20 @@ class HomeViewModel {
     
     func fetchWeatherForecast(for name: String, _ completion: @escaping (() -> Void)) {
         ForecastNetworkController.fetchWeather(for: name) { weather in
-            self.weatherForecast = weather
+            
+            self.weatherForecast = WeatherForecast(list: [], city: weather.city)
+                  let startDate = weather.list[0].dt_txt
+                  let index = startDate.index(startDate.endIndex, offsetBy: -8)
+                  let startSubstring = startDate[index...]
+            
+                  _ = weather.list.map{ element in
+                    let startDate = element.dt_txt
+                    let index = startDate.index(startDate.endIndex, offsetBy: -8)
+                    let elementSubstring = startDate[index...]
+                    if elementSubstring == startSubstring {
+                      self.weatherForecast.list.append(element)
+                    }
+                  }
             
        
   
