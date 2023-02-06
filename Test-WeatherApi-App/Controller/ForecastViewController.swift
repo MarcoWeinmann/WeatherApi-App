@@ -59,33 +59,8 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         let strDate = dateFormatter.string(from: date)
         
         let tage = viewModel.weatherForecast?.list
-        
-        
-        //        dt3.text = tage![16].dt_txt
-        //        dt4.text = tage![24].dt_txt
-        //        dt5.text = tage![32].dt_txt
-        
-        
-        //        temp1.text = String((weatherForecast?.list[1].main.temp_min ?? 0) +  viewModel.tempMaxStringForecast)
-        //        temp2.text = String(viewModel.tempMinStringForecast +  viewModel.tempMaxStringForecast)
-        //        temp3.text = String(viewModel.tempMinStringForecast +  viewModel.tempMaxStringForecast)
-        //        temp4.text = String(viewModel.tempMinStringForecast +  viewModel.tempMaxStringForecast)
-        //        temp5.text = String(viewModel.tempMinStringForecast +  viewModel.tempMaxStringForecast)
-        ////
-        //       description1.text = viewModel.descriptionString
-        //        description2.text = viewModel.descriptionString
-        //        description3.text = viewModel.descriptionString
-        //        description4.text = viewModel.descriptionString
-        //        description5.text = viewModel.descriptionString
+
     }
-    
-    
-    
-    
-    //TODO
-    //weitergeben von suchbegriff aus homecontroller in den forecasController
-    //suchbegriff als Q aus Forecastnetworkcontroller setzen
-    //
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if viewModel.weatherForecast != nil {
@@ -104,6 +79,8 @@ class ForecastViewController: UIViewController, UITableViewDelegate, UITableView
         
 
             let cellInput = viewModel.weatherForecast!.list[indexPath.row]
+        
+       // cell.iconView.image = UIImage(data: (cellInput.weather.last?.icon))
         
         cell.labelTime.text = cellInput.dt_txt
         cell.labelTemp.text = String(cellInput.main.temp_min) + "°C / " + String(cellInput.main.temp_max) + "°C"

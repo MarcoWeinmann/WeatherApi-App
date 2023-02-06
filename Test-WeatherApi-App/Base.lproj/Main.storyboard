@@ -274,9 +274,14 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4q-xn-izR">
+                                                    <rect key="frame" x="246" y="0.0" width="46" height="46"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="J4q-xn-izR" firstAttribute="top" secondItem="whD-5y-5VT" secondAttribute="top" id="07h-vs-ftp"/>
                                                 <constraint firstItem="Dry-92-7XK" firstAttribute="top" secondItem="whD-5y-5VT" secondAttribute="topMargin" id="3jz-ar-KfX"/>
+                                                <constraint firstItem="fYD-zb-Who" firstAttribute="leading" secondItem="J4q-xn-izR" secondAttribute="trailing" constant="8" id="6c0-0C-lmG"/>
                                                 <constraint firstItem="m5E-vK-MbM" firstAttribute="top" secondItem="Dry-92-7XK" secondAttribute="bottom" constant="15" id="DRq-v0-BWd"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="fYD-zb-Who" secondAttribute="trailing" constant="5" id="OJl-RR-VvI"/>
                                                 <constraint firstItem="Dry-92-7XK" firstAttribute="leading" secondItem="whD-5y-5VT" secondAttribute="leadingMargin" id="tP9-F9-sZC"/>
@@ -285,6 +290,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="iconView" destination="J4q-xn-izR" id="yUr-68-2KP"/>
+                                            <outlet property="imageView" destination="J4q-xn-izR" id="Zs5-C7-jCr"/>
                                             <outlet property="labelDescription" destination="fYD-zb-Who" id="7R2-mb-fKY"/>
                                             <outlet property="labelTemp" destination="m5E-vK-MbM" id="kOI-hg-43V"/>
                                             <outlet property="labelTime" destination="Dry-92-7XK" id="5q8-yZ-mfE"/>

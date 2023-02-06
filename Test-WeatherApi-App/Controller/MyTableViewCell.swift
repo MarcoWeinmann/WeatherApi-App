@@ -15,6 +15,9 @@ class MyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelDescription: UILabel!
     
+    
+    @IBOutlet weak var iconView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

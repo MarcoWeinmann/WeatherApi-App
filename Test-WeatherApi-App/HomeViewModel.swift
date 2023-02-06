@@ -47,7 +47,7 @@ class HomeViewModel {
     var date: Int {
         
         return (weatherForecast?.list[0].dt)!
-//        (String(format: "%.1f", weatherForecast?.list[0].dt  ?? 0))!
+
     }
     
     var tempMinStringForecast: Double {

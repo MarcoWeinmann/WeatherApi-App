@@ -37,6 +37,7 @@ struct List: Decodable, Equatable {
         struct Weather2: Decodable {
             
             var description: String
+        //    var icon: Data
         }
     
     struct City: Decodable {
